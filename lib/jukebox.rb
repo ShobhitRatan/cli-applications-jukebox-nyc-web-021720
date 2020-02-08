@@ -29,12 +29,32 @@ end
 def play(array)
   puts "Please enter a song or number: "
   song_request = gets.strip
-  if array.include? (song_request)
+  if array.include?(song_request)
     puts "Playing #{song_request}"
   elsif (1..9).include?(song_request.to_i)
     song_index = (song_request.to_i - 1)
     puts "Playing #{array[song_index]}"
   else
     puts "Invalid input, please try again"
+  end
+end
+
+def exit_jukebox
+  puts "Goodbye"
+end
+
+def run(songs)
+  puts "Please enter a command:"
+  command = gets.strip
+  if command == "exit"
+    exit_jukebox
+  elsif command == "help"
+    help
+  elsif command == "list"
+    list(songs)
+  elsif command == "play"
+    play(songs)
+  else
+    puts "Not a valid command"
   end
 end 
