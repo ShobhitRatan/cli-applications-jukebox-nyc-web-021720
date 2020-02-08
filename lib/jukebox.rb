@@ -13,10 +13,10 @@ songs = [
 
 def help
   puts "I accept the following commands:"
-  puts "- help : displays the help message"
-  puts "- list : displays a list of songs you can play"
-  puts "- play : lets you choose a song to play"
-  puts "- exit : exits this program"
+  puts "/- help : displays the help message/"
+  puts "/- list : displays a list of songs you can play/"
+  puts "/- play : lets you choose a song to play/"
+  puts "/- exit : exits this program/"
 end
 
 def list(array)
@@ -27,7 +27,7 @@ def list(array)
 end
 
 def play(array)
-  puts "Please enter a song or number: "
+  puts "/Please enter a song or number:/"
   song_request = gets.strip
   if array.include?(song_request)
     puts "Playing #{song_request}"
