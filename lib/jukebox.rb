@@ -20,9 +20,8 @@ def help
 end
 
 def list(array)
-  array.map do |n| 
-    num = array.index(n) + 1 
+  array.map do |n|
+    num = array.index(n) + 1
     puts "#{num}. #{n}"
-  end 
-end  
-
+  end
+end
