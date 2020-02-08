@@ -25,3 +25,16 @@ def list(array)
     puts "#{num}. #{n}"
   end
 end
+
+def play(array)
+  puts "Please enter a song or number: "
+  song_request = gets.strip
+  if array.include? (song_request)
+    puts "Playing #{song_request}"
+  elsif (1..9).include?(song_request.to_i)
+    song_index = (song_request.to_i - 1)
+    puts "Playing #{array[song_index]}"
+  else
+    puts "Invalid input, please try again"
+  end
+end 
