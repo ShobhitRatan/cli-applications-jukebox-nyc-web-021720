@@ -13,27 +13,27 @@ songs = [
 
 def help
   puts "I accept the following commands:"
-  puts "/- help : displays the help message/"
-  puts "/- list : displays a list of songs you can play/"
-  puts "/- play : lets you choose a song to play/"
-  puts "/- exit : exits this program/"
+  puts "- help : displays this help message"
+  puts "- list : displays a list of songs you can play"
+  puts "- play : lets you choose a song to play"
+  puts "- exit : exits this program"
 end
 
 def list(array)
   array.map do |n|
-    num = array.index(n) + 1
+    num = array.index(i) + 1
     puts "#{num}. #{n}"
   end
 end
 
 def play(array)
-  puts "/Please enter a song or number:/"
+  puts "Please enter a song name or number: "
   song_request = gets.strip
   if array.include?(song_request)
     puts "Playing #{song_request}"
   elsif (1..9).include?(song_request.to_i)
-    song_index = (song_request.to_i - 1)
-    puts "Playing #{array[song_index]}"
+    index_of_song = (song_request.to_i - 1)
+    puts "Playing #{array[index_of_song]}"
   else
     puts "Invalid input, please try again"
   end
@@ -55,6 +55,6 @@ def run(songs)
   elsif command == "play"
     play(songs)
   else
-    puts "Not a valid command"
+    puts "not a valid command"
   end
-end
+end 
