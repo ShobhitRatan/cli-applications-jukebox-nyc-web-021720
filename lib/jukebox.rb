@@ -21,7 +21,7 @@ end
 
 def list(array)
   array.map do |n|
-    num = array.index(i) + 1
+    num = array.index(n) + 1
     puts "#{num}. #{n}"
   end
 end
@@ -57,4 +57,4 @@ def run(songs)
   else
     puts "not a valid command"
   end
-end 
+end
